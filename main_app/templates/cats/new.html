@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add new Cat</h2>
+<form action="/cats/new/" method="post">
+    {% csrf_token %}
+    {{ cat_form.as_p }}
+    <input type="submit" class="btn" value="Add Cat">
+  </form>
+{% endblock %}

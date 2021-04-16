@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+<!-- the variable next to block needs to match up to what is in out extends file -->
+{% block content %}
+
+    <h1>Edit Profile</h1>
+    <form action="{% url 'edit_profile' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.media }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
