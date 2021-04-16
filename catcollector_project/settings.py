@@ -142,4 +142,4 @@ LOGIN_REDIRECT_URL = '/cats/'
 LOGOUT_REDIRECT_URL = '/'
 
 import django_heroku
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
